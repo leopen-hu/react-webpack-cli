@@ -58,7 +58,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      template: './index.html',
+      template: './src/index.html',
       title: 'React Webpack Cli'
     })
   ]
