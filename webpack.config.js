@@ -5,7 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    index: './src/index.js'
+    index: './src/App.jsx'
   },
   output: {
     filename: '[name].bundle.js',
@@ -41,15 +41,24 @@ module.exports = {
         ]
       },
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /nod_modules/,
         loader: "babel-loader"
+      },
+      {
+        test: /\.html$/,
+        exclude: /nod_modules/,
+        loader: "html-loader"
       }
     ]
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json', '.scss', '.css']
   },
   plugins: [
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
+      template: './index.html',
       title: 'React Webpack Cli'
     })
   ]
