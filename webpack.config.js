@@ -39,6 +39,11 @@ module.exports = {
         use: [
           'file-loader'
         ]
+      },
+      {
+        test: /\.js$/,
+        exclude: /nod_modules/,
+        loader: "babel-loader"
       }
     ]
   },
