@@ -1,0 +1,29 @@
+{
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb"
+  ],
+  "plugins": [
+    "react"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    },
+    "sourceType": "module",
+    "ecmaVersion": 7
+  },
+  "globals": {
+    "$": true,
+    "process": true,
+    "__dirname": true
+  },
+  "rules": {
+    "react/jsx-one-expression-per-line": 0
+  }
+}

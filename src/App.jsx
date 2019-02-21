@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import Example from './components/Example';
 
 function App() {
   return (
-    <div>
+    <Fragment>
       <Example />
       <Example />
-    </div>
+    </Fragment>
   );
 }
 
